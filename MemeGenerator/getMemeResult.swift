@@ -22,3 +22,12 @@ struct Meme: Codable{
     var height:Int
     var box_count:Int
 }
+struct getMemeRespond: Codable{
+    var success:Bool
+    var error_message:String
+    var data:respondData
+}
+struct respondData: Codable{
+    var url:URL
+    var page_url:URL
+}
