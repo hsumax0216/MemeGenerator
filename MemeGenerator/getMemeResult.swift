@@ -24,8 +24,8 @@ struct Meme: Codable{
 }
 struct getMemeRespond: Codable{
     var success:Bool
-    var error_message:String
-    var data:respondData
+    var error_message:String?
+    var data:respondData?
 }
 struct respondData: Codable{
     var url:URL
