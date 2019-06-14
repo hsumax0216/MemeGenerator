@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		33D8A23B22B285ED009A78F8 /* postrespondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D8A23A22B285ED009A78F8 /* postrespondViewController.swift */; };
 		4785632922B1003A0011ED7E /* memeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4785632822B1003A0011ED7E /* memeTableViewCell.swift */; };
 		4785632B22B100A30011ED7E /* memeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4785632A22B100A30011ED7E /* memeTableViewController.swift */; };
 		4785632D22B100DD0011ED7E /* getMemeResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4785632C22B100DD0011ED7E /* getMemeResult.swift */; };
@@ -19,6 +18,7 @@
 		478C4B7522B0FF300068B999 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 478C4B7322B0FF300068B999 /* LaunchScreen.storyboard */; };
 		478C4B8022B0FF300068B999 /* MemeGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478C4B7F22B0FF300068B999 /* MemeGeneratorTests.swift */; };
 		478C4B8B22B0FF300068B999 /* MemeGeneratorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478C4B8A22B0FF300068B999 /* MemeGeneratorUITests.swift */; };
+		9C46B27C22B2ACD600A5FCFB /* postrespondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C46B27B22B2ACD600A5FCFB /* postrespondViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +39,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		33D8A23A22B285ED009A78F8 /* postrespondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = postrespondViewController.swift; path = /Users/user24/Desktop/MemeGenerator/MemeGenerator/postrespondViewController.swift; sourceTree = "<absolute>"; };
 		4785632822B1003A0011ED7E /* memeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = memeTableViewCell.swift; sourceTree = "<group>"; };
 		4785632A22B100A30011ED7E /* memeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = memeTableViewController.swift; sourceTree = "<group>"; };
 		4785632C22B100DD0011ED7E /* getMemeResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getMemeResult.swift; sourceTree = "<group>"; };
@@ -57,6 +56,7 @@
 		478C4B8622B0FF300068B999 /* MemeGeneratorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MemeGeneratorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		478C4B8A22B0FF300068B999 /* MemeGeneratorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeGeneratorUITests.swift; sourceTree = "<group>"; };
 		478C4B8C22B0FF300068B999 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C46B27B22B2ACD600A5FCFB /* postrespondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = postrespondViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,11 +107,11 @@
 		478C4B6922B0FF2D0068B999 /* MemeGenerator */ = {
 			isa = PBXGroup;
 			children = (
-				33D8A23A22B285ED009A78F8 /* postrespondViewController.swift */,
 				478C4B6A22B0FF2D0068B999 /* AppDelegate.swift */,
 				478C4B6C22B0FF2D0068B999 /* ViewController.swift */,
 				478C4B6E22B0FF2D0068B999 /* Main.storyboard */,
 				4785632E22B10A1A0011ED7E /* postmemeDetailViewController.swift */,
+				9C46B27B22B2ACD600A5FCFB /* postrespondViewController.swift */,
 				4785632C22B100DD0011ED7E /* getMemeResult.swift */,
 				4785632A22B100A30011ED7E /* memeTableViewController.swift */,
 				4785632822B1003A0011ED7E /* memeTableViewCell.swift */,
@@ -273,7 +273,7 @@
 			files = (
 				478C4B6D22B0FF2D0068B999 /* ViewController.swift in Sources */,
 				478C4B6B22B0FF2D0068B999 /* AppDelegate.swift in Sources */,
-				33D8A23B22B285ED009A78F8 /* postrespondViewController.swift in Sources */,
+				9C46B27C22B2ACD600A5FCFB /* postrespondViewController.swift in Sources */,
 				4785632922B1003A0011ED7E /* memeTableViewCell.swift in Sources */,
 				4785632F22B10A1A0011ED7E /* postmemeDetailViewController.swift in Sources */,
 				4785632D22B100DD0011ED7E /* getMemeResult.swift in Sources */,

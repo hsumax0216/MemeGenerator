@@ -17,8 +17,10 @@ class postrespondViewController: UIViewController {
     //var meme:Meme?
     override func viewDidLoad() {
         super.viewDidLoad()
-        //let dic = respondData as! Dictionary<String,Any>
-        //print(dic)
+        //print(respondData!)
+        let dic = respondData as? Dictionary<String,Any>
+        print("print dic")
+        print(dic as Any)
         // Do any additional setup after loading the view.
     }
     
