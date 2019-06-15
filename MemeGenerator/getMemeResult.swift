@@ -9,9 +9,9 @@
 import Foundation
 struct getMemeResult: Codable{
     var success:Bool
-    var data:Data
+    var data:data
 }
-struct Data: Codable{
+struct data: Codable{
     var memes:[Meme]
 }
 struct Meme: Codable{

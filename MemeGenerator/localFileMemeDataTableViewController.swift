@@ -1,80 +1,70 @@
 //
-//  memeTableViewController.swift
+//  localFileMemeDataTableViewController.swift
 //  MemeGenerator
 //
-//  Created by User17 on 2019/6/12.
+//  Created by User17 on 2019/6/15.
 //  Copyright © 2019 hsumax0216. All rights reserved.
 //
 
 import UIKit
 
-class memeTableViewController: UITableViewController {
-    var memes = [Meme]()
+class localFileMemeDataTableViewController: UITableViewController {
     var memedatas = [memeData]()
-    @IBAction func unwindTomemeTableView(segue: UIStoryboardSegue){
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
+        memedatas.remove(at: indexPath.row)
+        
+        memeData.saveToFile(memes: memedatas)
+        tableView.deleteRows(at: [indexPath], with: .automatic)
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        viewDidLoad()
+    }
+    override func viewDidLoad() {
+        super.viewDidLoad()
         if let memedatas = memeData.readLoversFromFile(){
             self.memedatas = memedatas
         }
         else {
             print("memedata reload fail")
         }
-        if let controller = segue.source as? postrespondViewController,let meme = controller.meme{
-            memedatas.insert(meme, at: 0)
-            memeData.saveToFile(memes: memedatas)
-        }
-        else{
-            print("memedatas save fail")
-        }
-    }
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        let urlString = "https://api.imgflip.com/get_memes"
-        if let url = URL(string: urlString) {
-            let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
-                
-                let decoder = JSONDecoder()
-                if let data = data, let memeResults = try? decoder.decode(getMemeResult.self, from: data) {
-                    self.memes = memeResults.data.memes;               DispatchQueue.main.async {
-                        self.tableView.reloadData()
-                    }
-                }
-                else{
-                    print("ErrorIn")
-                }
-            }
-            task.resume()
-        }
-        else{
-            print("ErrorOut")
-        }
-      
+        self.tableView.reloadData()
+        // Uncomment the following line to preserve selection between presentations
+        // self.clearsSelectionOnViewWillAppear = false
+
+        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
     // MARK: - Table view data source
-
-    /*override func numberOfSections(in tableView: UITableView) -> Int {
+/*
+    override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 0
     }*/
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return memes.count
+        return memedatas.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "memeCell", for: indexPath) as! memeTableViewCell
-        let meme = memes[indexPath.row]
-        cell.memeTitle.text = meme.name
-        let task = URLSession.shared.dataTask(with: meme.url) { (data, response , error) in
-            if let data = data {
-                DispatchQueue.main.async {
-                    cell.memePreview.image = UIImage(data: data)
-                }
-            }
-        }
-        task.resume()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "memeDataCell", for: indexPath) as! localFileMemeTableViewCell
+        let memedata = memedatas[indexPath.row]
+        //cell.memeTitleLabel.text
+        cell.userTextLabel.text = memedata.user
+        cell.memeTitleLabel.text = memedata.title
+        let url = memeData.documentsDirectory.appendingPathComponent(memedata.imageName!).appendingPathExtension("jpeg")
+        print("imageName:")
+        print(memedata.imageName!)
+        // Configure the cell...
+        cell.userImage.image = UIImage(contentsOfFile: url.path)
+        let url2 = memeData.documentsDirectory.appendingPathComponent(memedata.memeImageName!).appendingPathExtension("jpeg")
+        print("memeImage Path:"+url2.path)
+        print("memeImageName:")
+        print(memedata.memeImageName!)
+        cell.memePreview.image = UIImage(contentsOfFile: url2.path)
         return cell
     }
     
@@ -114,16 +104,14 @@ class memeTableViewController: UITableViewController {
     }
     */
 
-    
+    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let row = tableView.indexPathForSelectedRow?.row {
-            let controller = segue.destination as? postmemeDetailViewController
-            controller?.meme = memes[row]
-        }
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
     }
-    
+    */
 
 }
