@@ -5,10 +5,42 @@
 //  Created by User17 on 2019/6/12.
 //  Copyright © 2019 hsumax0216. All rights reserved.
 //
+/*
+ 
+ //  AppDelegate.m
+ #import <FBSDKCoreKit/FBSDKCoreKit.h>
+ 
+ - (BOOL)application:(UIApplication *)application
+ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+ 
+ [[FBSDKApplicationDelegate sharedInstance] application:application
+ didFinishLaunchingWithOptions:launchOptions];
+ // Add any custom logic here.
+ return YES;
+ }
+ 
+ 
+ /////////
+ 
+ 
+ - (BOOL)application:(UIApplication *)application
+ openURL:(NSURL *)url
+ options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
+ 
+ BOOL handled = [[FBSDKApplicationDelegate sharedInstance] application:application
+ openURL:url
+ sourceApplication:options[UIApplicationOpenURLOptionsSourceApplicationKey]
+ annotation:options[UIApplicationOpenURLOptionsAnnotationKey]
+ ];
+ // Add any custom logic here.
+ return handled;
+ }
+ 
+*/
+
 
 import UIKit
-
-@UIApplicationMain
+import FBSDKCoreKit.h
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
@@ -16,6 +48,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        //FBSDKApplicationDelegate
         return true
     }
 
@@ -34,13 +67,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {
-        // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        
     }
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
-
+    
 }
 
