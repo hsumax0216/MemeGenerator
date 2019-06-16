@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3A3ACDD1FC0C6923253772B4 /* Pods_MemeGeneratorUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65432F32E903D86FB5CF01AE /* Pods_MemeGeneratorUITests.framework */; };
+		3B2410E722B65ED900BF1BE5 /* savePresentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2410E622B65ED900BF1BE5 /* savePresentViewController.swift */; };
 		471D3804067F4C1C3BEED5FF /* Pods_MemeGenerator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 332760CBBE14B34E9B948D7C /* Pods_MemeGenerator.framework */; };
 		4785632922B1003A0011ED7E /* memeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4785632822B1003A0011ED7E /* memeTableViewCell.swift */; };
 		4785632B22B100A30011ED7E /* memeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4785632A22B100A30011ED7E /* memeTableViewController.swift */; };
@@ -49,6 +50,7 @@
 		1065926C2CD86E67AB3FD302 /* Pods-MemeGenerator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemeGenerator.debug.xcconfig"; path = "Target Support Files/Pods-MemeGenerator/Pods-MemeGenerator.debug.xcconfig"; sourceTree = "<group>"; };
 		16F037CB18C26141ABE9B6B4 /* Pods-MemeGeneratorUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemeGeneratorUITests.release.xcconfig"; path = "Target Support Files/Pods-MemeGeneratorUITests/Pods-MemeGeneratorUITests.release.xcconfig"; sourceTree = "<group>"; };
 		332760CBBE14B34E9B948D7C /* Pods_MemeGenerator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MemeGenerator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B2410E622B65ED900BF1BE5 /* savePresentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = savePresentViewController.swift; sourceTree = "<group>"; };
 		46F1CFE4EA4F648E01F9650F /* Pods-MemeGenerator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemeGenerator.release.xcconfig"; path = "Target Support Files/Pods-MemeGenerator/Pods-MemeGenerator.release.xcconfig"; sourceTree = "<group>"; };
 		4785632822B1003A0011ED7E /* memeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = memeTableViewCell.swift; sourceTree = "<group>"; };
 		4785632A22B100A30011ED7E /* memeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = memeTableViewController.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 				478C4B6A22B0FF2D0068B999 /* AppDelegate.swift */,
 				478C4B6C22B0FF2D0068B999 /* ViewController.swift */,
 				478C4B6E22B0FF2D0068B999 /* Main.storyboard */,
+				3B2410E622B65ED900BF1BE5 /* savePresentViewController.swift */,
 				47CD26C022B552EB00127125 /* memeTabBarController.swift */,
 				47CD26BE22B53CF100127125 /* localFileMemeTableViewCell.swift */,
 				47CD26BC22B53B8F00127125 /* localFileMemeDataTableViewController.swift */,
@@ -414,6 +417,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				47CD26C122B552EB00127125 /* memeTabBarController.swift in Sources */,
+				3B2410E722B65ED900BF1BE5 /* savePresentViewController.swift in Sources */,
 				478C4B6D22B0FF2D0068B999 /* ViewController.swift in Sources */,
 				47CD26BD22B53B8F00127125 /* localFileMemeDataTableViewController.swift in Sources */,
 				478C4B6B22B0FF2D0068B999 /* AppDelegate.swift in Sources */,
