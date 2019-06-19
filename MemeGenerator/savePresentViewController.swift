@@ -63,7 +63,12 @@ class savePresentViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func albumSave(_ sender: Any) {
+        if let image = memeImageView.image{
+            UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+        }
+    }
+    
     /*
     // MARK: - Navigation
 

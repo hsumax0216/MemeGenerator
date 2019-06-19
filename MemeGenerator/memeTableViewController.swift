@@ -18,7 +18,7 @@ class memeTableViewController: UITableViewController {
         else {
             print("memedata reload fail")
         }
-        if let controller = segue.source as? postrespondViewController,let meme = controller.meme{
+        if let controller = segue.source as? postrespondTableViewController/*postrespondViewController*/,let meme = controller.meme{
             memedatas.insert(meme, at: 0)
             memeData.saveToFile(memes: memedatas)
         }
@@ -120,7 +120,7 @@ class memeTableViewController: UITableViewController {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let row = tableView.indexPathForSelectedRow?.row {
-            let controller = segue.destination as? postmemeDetailViewController
+            let controller = segue.destination as? postmemeDetailTableViewController/*postmemeDetailViewController*/
             controller?.meme = memes[row]
         }
     }

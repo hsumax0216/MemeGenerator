@@ -8,7 +8,7 @@
 
 import UIKit
 
-class postmemeDetailViewController: UIViewController {
+class postmemeDetailViewController: UIViewController ,UITextFieldDelegate{
     @IBOutlet weak var imageview: UIImageView!
     @IBOutlet weak var topText: UITextField!
     @IBOutlet weak var bottomText: UITextField!
@@ -36,6 +36,9 @@ class postmemeDetailViewController: UIViewController {
         }
         
         // Do any additional setup after loading the view.
+    }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        	self.view.endEditing(true)
     }
     @IBAction func postest(_ sender: Any) {
         // 这个session可以使用刚才创建的。
@@ -103,4 +106,8 @@ class postmemeDetailViewController: UIViewController {
         //let controller = segue.destination as? postrespondViewController
                
      }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 }
