@@ -72,7 +72,11 @@ class savePresentViewController: UIViewController {
     
     @IBAction func showShareOptions(sender: AnyObject) {
         let actionSheet = UIAlertController(title: "", message: "Share your Meme", preferredStyle: UIAlertController.Style.actionSheet)
-
+        let albumAction = UIAlertAction(title: "Save to Ablum", style: UIAlertAction.Style.default) {(action) -> Void in
+            if let image = self.memeImageView.image{
+                UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+            }
+        }
         let moreAction = UIAlertAction(title: "Share", style: UIAlertAction.Style.default) { (action) -> Void in
             let activityItem: [AnyObject] = [self.memeImageView.image as AnyObject]
             let activityViewController = UIActivityViewController(activityItems: (activityItem as AnyObject) as! [Any], applicationActivities: nil)
@@ -82,6 +86,7 @@ class savePresentViewController: UIViewController {
         let dismissAction = UIAlertAction(title: "Close", style: UIAlertAction.Style.cancel) { (action) -> Void in
             
         }
+        actionSheet.addAction(albumAction)
         actionSheet.addAction(moreAction)
         actionSheet.addAction(dismissAction)
         present(actionSheet, animated: true, completion: nil)

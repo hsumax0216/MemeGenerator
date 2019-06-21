@@ -724,9 +724,9 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Image" id="Klz-jl-jHn">
-                        <barButtonItem key="rightBarButtonItem" title="album" id="ZeA-Mq-xgA">
+                        <barButtonItem key="rightBarButtonItem" title="share" id="ZeA-Mq-xgA" userLabel="share">
                             <connections>
-                                <action selector="albumSave:" destination="2Mj-qH-Jel" id="lR2-Nb-fBQ"/>
+                                <action selector="showShareOptionsWithSender:" destination="2Mj-qH-Jel" id="uZA-sh-VCa"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
