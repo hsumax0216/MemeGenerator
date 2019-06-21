@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3A3ACDD1FC0C6923253772B4 /* Pods_MemeGeneratorUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65432F32E903D86FB5CF01AE /* Pods_MemeGeneratorUITests.framework */; };
 		3B2410E722B65ED900BF1BE5 /* savePresentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2410E622B65ED900BF1BE5 /* savePresentViewController.swift */; };
+		3BB13C4922BCF8450043263B /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BB13C4822BCF8450043263B /* Social.framework */; };
 		4716695822BA224500A49B04 /* rollTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4716695722BA224500A49B04 /* rollTableView.swift */; };
 		471D3804067F4C1C3BEED5FF /* Pods_MemeGenerator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 332760CBBE14B34E9B948D7C /* Pods_MemeGenerator.framework */; };
 		4723642E22BA03E800E5ACE8 /* postmemeDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4723642D22BA03E800E5ACE8 /* postmemeDetailTableViewController.swift */; };
@@ -54,6 +55,7 @@
 		16F037CB18C26141ABE9B6B4 /* Pods-MemeGeneratorUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemeGeneratorUITests.release.xcconfig"; path = "Target Support Files/Pods-MemeGeneratorUITests/Pods-MemeGeneratorUITests.release.xcconfig"; sourceTree = "<group>"; };
 		332760CBBE14B34E9B948D7C /* Pods_MemeGenerator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MemeGenerator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B2410E622B65ED900BF1BE5 /* savePresentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = savePresentViewController.swift; sourceTree = "<group>"; };
+		3BB13C4822BCF8450043263B /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		46F1CFE4EA4F648E01F9650F /* Pods-MemeGenerator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemeGenerator.release.xcconfig"; path = "Target Support Files/Pods-MemeGenerator/Pods-MemeGenerator.release.xcconfig"; sourceTree = "<group>"; };
 		4716695722BA224500A49B04 /* rollTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rollTableView.swift; sourceTree = "<group>"; };
 		4723642D22BA03E800E5ACE8 /* postmemeDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = postmemeDetailTableViewController.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BB13C4922BCF8450043263B /* Social.framework in Frameworks */,
 				471D3804067F4C1C3BEED5FF /* Pods_MemeGenerator.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -197,6 +200,7 @@
 		AF1A4DD13A90F34200BB6629 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3BB13C4822BCF8450043263B /* Social.framework */,
 				332760CBBE14B34E9B948D7C /* Pods_MemeGenerator.framework */,
 				D4D0AEEB9E56A04FDEDA432C /* Pods_MemeGeneratorTests.framework */,
 				65432F32E903D86FB5CF01AE /* Pods_MemeGeneratorUITests.framework */,

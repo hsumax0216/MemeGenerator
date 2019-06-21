@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Social
 import FBSDKCoreKit
 import FBSDKShareKit
 class savePresentViewController: UIViewController {
@@ -16,7 +17,7 @@ class savePresentViewController: UIViewController {
     var memedata: memeData?
     override func viewDidLoad() {
         super.viewDidLoad()
-         let photo = SharePhoto.init()
+         //let photo = SharePhoto.init()
         if let memedata = memedata{
             navigationItem.title = memedata.title
             usernameLabel.text = memedata.user
@@ -24,9 +25,9 @@ class savePresentViewController: UIViewController {
             memeImageView.image = UIImage(contentsOfFile: url.path)
             let urluser = memeData.documentsDirectory.appendingPathComponent(memedata.imageName!).appendingPathExtension("jpeg")
             userImageView.image = UIImage(contentsOfFile: urluser.path)
-            photo.image = UIImage(contentsOfFile: url.path)
+            /*photo.image = UIImage(contentsOfFile: url.path)
             photo.caption = memedata.title
-            photo.isUserGenerated = false
+            photo.isUserGenerated = false*/
         }
         /*let uuuu = NSURL(string: "https://stackoverflow.com/a/45263496/1724845")
         let content = ShareLinkContent.init()
@@ -40,7 +41,7 @@ class savePresentViewController: UIViewController {
         /*let uuuu = NSURL(string: "https://stackoverflow.com/a/45263496/1724845")
         let content = ShareLinkContent.init()
         content.contentURL = uuuu! as URL*/
-        let content = ShareMediaContent.init()
+        /*let content = ShareMediaContent.init()
         content.media = [photo]
         let shareButtom = FBShareButton.init()
         shareButtom.shareContent = content
@@ -59,7 +60,7 @@ class savePresentViewController: UIViewController {
         }
         else{
             print("shareButtom notEnabled")
-        }
+        }*/
         // Do any additional setup after loading the view.
     }
     
@@ -69,6 +70,22 @@ class savePresentViewController: UIViewController {
         }
     }
     
+    @IBAction func showShareOptions(sender: AnyObject) {
+        let actionSheet = UIAlertController(title: "", message: "Share your Meme", preferredStyle: UIAlertController.Style.actionSheet)
+
+        let moreAction = UIAlertAction(title: "Share", style: UIAlertAction.Style.default) { (action) -> Void in
+            let activityItem: [AnyObject] = [self.memeImageView.image as AnyObject]
+            let activityViewController = UIActivityViewController(activityItems: (activityItem as AnyObject) as! [Any], applicationActivities: nil)
+            
+            self.present(activityViewController, animated: true, completion: nil)
+        }
+        let dismissAction = UIAlertAction(title: "Close", style: UIAlertAction.Style.cancel) { (action) -> Void in
+            
+        }
+        actionSheet.addAction(moreAction)
+        actionSheet.addAction(dismissAction)
+        present(actionSheet, animated: true, completion: nil)
+    }
     /*
     // MARK: - Navigation
 
